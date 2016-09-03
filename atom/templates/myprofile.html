@@ -1,0 +1,11 @@
+{% if request.user.is_authenticated %}
+Welcome<h3> {{ user.username }}  </h3>
+
+<a href="/myprofile/logout/">Logout</a>
+ 
+{% else %}
+
+username and password didn't match, please try again
+
+
+{% endif %}
