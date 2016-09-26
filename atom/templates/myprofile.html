@@ -1,8 +1,48 @@
 {% if request.user.is_authenticated %}
-Welcome<h3> {{ user.username }}  </h3>
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "css/myprofile.css" %}">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+<div class="navbar">
+<div class="username">{{ user.username }}</div>
+</div>
+
+<div class="heading">Make your Portfolio</div>
+
+
+<div class="formfill">
+	<div class="formimage"></div>
+
+	<div class="mainform">
+		<form>{% csrf_token %}
+			<p>{{ form.full_name }}</p>
+			<p>{{ form.email }}</p>
+			<p>{{ form.college_name }}</p>
+			<p>{{ form.college_place }}</p>
+			<p>{{ form.phone_no }}</p>
+			<p>{{ form.skill1 }}<i class="fa fa-plus" aria-hidden="true" style="font-size:30px; color:orange;"></i></p>
+			<p>{{ form.branch }}</p>
+			<p>{{ form.year }}</p>
+			<p>{{ form.post }}</p>
+			<p>{{ form.profile_image }}</p>
+
+		</form>
+	</div>
+
+</div>
+
+
+
 
 <a href="/myprofile/logout/">Logout</a>
- 
+
+
+
+</body>
+</html> 
 {% else %}
 
 username and password didn't match, please try again

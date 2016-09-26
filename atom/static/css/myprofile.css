@@ -1,0 +1,82 @@
+body::-webkit-scrollbar {
+    height: 0em;
+    width: 4px;
+}
+ 
+body::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #547ec9;
+  /*outline: 1px solid slategrey;*/
+}
+
+
+.outer::-webkit-scrollbar {
+    height: 0em;
+    width: 4px;
+}
+
+.navbar {
+	position:fixed;
+	z-index: 10;
+	height:60px;
+	width:100%;
+	background-color: rgb(24,40,65);
+	top:0px;
+	left:0px;
+	color:orange;
+}
+
+.heading {
+	font-size: 40px;
+	color: orange;
+	font-family: geometos;
+	margin-top: 60px;
+	position: fixed;
+	top:-45px;
+	z-index: 12;
+	left:420px;
+}
+
+.formimage {
+	background-image: url(../images/formimage.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:100%;
+	width: 100%;
+	position: fixed;
+	left:0px;
+	top:60px;
+	z-index: 5;
+}
+
+form {
+	position: relative;
+	z-index: 5;
+	top:200px;
+}
+
+.mainform {
+	position: relative;
+	left:470px;
+	font-family: geometos;
+	z-index: 7;
+}
+
+input {
+	height: 40px;
+	width:400px;
+	font-size: 20px;
+	color:black;
+	border:1px solid orange;
+	border-radius: 5px;
+	outline: none;
+	top:0px;
+	padding-left: 10px;
+}
+
+button {
+	border:0px;
+}

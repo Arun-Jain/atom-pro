@@ -3,6 +3,8 @@ from django.http import HttpResponse,Http404
 from . import forms
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.http import HttpResponse
+from .models import formfill
+from .forms import formfills
 
 # Create your views here.
 def index(request):
@@ -50,8 +52,9 @@ def signup(request):
 	return render(request , 'signup.html', context)
 
 def myprofile(request):
+	form = formfills()
 	context = {
-		
+		'form':form,
 	}
 	return render(request, 'myprofile.html', context)
 

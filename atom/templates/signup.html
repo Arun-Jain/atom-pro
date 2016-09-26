@@ -40,6 +40,7 @@
         <li><a href="/home/">Home</a></li>
         <li><a href="/companies/">COMPANIES</a></li>
         <li><a href="/faculties/">FACULTIES</a></li>
+        <li><a href="/students/">STUDENTS</a></li>
         <li><a href="/signup/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
@@ -59,7 +60,7 @@
 <div class="signup">
 	<form method="POST" action="">{% csrf_token %}
 		<div class="input_class">
-			{{ signup_of_user.username.errors }}
+			<font color="orange">{{ signup_of_user.username.errors }}</font>
 			{{ signup_of_user.username }}
 			{{ signup_of_user.email.errors }}
 			{{ signup_of_user.email }}
