@@ -17,17 +17,19 @@
 	<div class="formimage"></div>
 
 	<div class="mainform">
-		<form>{% csrf_token %}
+		<form method="POST" action="">{% csrf_token %}
 			<p>{{ form.full_name }}</p>
 			<p>{{ form.email }}</p>
 			<p>{{ form.college_name }}</p>
 			<p>{{ form.college_place }}</p>
 			<p>{{ form.phone_no }}</p>
-			<p>{{ form.skill1 }}<i class="fa fa-plus" aria-hidden="true" style="font-size:30px; color:orange;"></i></p>
+			<p>{{ form.skill1 }}   <i class="fa fa-plus" aria-hidden="true" style="font-size:30px; color:orange;"></i></p>
 			<p>{{ form.branch }}</p>
 			<p>{{ form.year }}</p>
 			<p>{{ form.post }}</p>
-			<p>{{ form.profile_image }}</p>
+			<p><div class="noborder">{{ form.profile_image }}</div></p>
+
+			<p><button class="btnsubmit" type="submit">Submit Details</button>
 
 		</form>
 	</div>

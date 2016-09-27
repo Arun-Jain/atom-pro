@@ -12,7 +12,6 @@ body::-webkit-scrollbar-thumb {
   /*outline: 1px solid slategrey;*/
 }
 
-
 .outer::-webkit-scrollbar {
     height: 0em;
     width: 4px;
@@ -79,4 +78,27 @@ input {
 
 button {
 	border:0px;
+}
+
+.btnsubmit {
+	width:250px;
+	height:40px;
+	background-color: rgb(24,40,65);
+	margin-left: 80px;
+	border-radius: 5px;
+	color:white;
+	font-family: geometos;
+}
+
+.btnsubmit:hover {
+	cursor: pointer;
+	background-color: rgba(24,40,65,0.9);
+}
+
+a {
+	position: fixed;
+	z-index: 50;
+	color:orange;
+	left:1200px;
+	top:30px;
 }

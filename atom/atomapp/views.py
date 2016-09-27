@@ -52,7 +52,12 @@ def signup(request):
 	return render(request , 'signup.html', context)
 
 def myprofile(request):
-	form = formfills()
+	form = formfills(request.POST or None)
+	if form.is_valid():
+		instance = form.save(commit=False)
+		instance.save()
+		return HttpResponse("Successfully created your Portfolio")
+
 	context = {
 		'form':form,
 	}
