@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>students | list</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/studentslist.css" %}">
+</head>
+<body>
+<div class="heading">STUDENTS LIST</div>
+
+	{%  for obj in students %}
+	<div class="eachstd">
+		<div class="image-div">
+			{% if obj.profile_image %}
+			<img src="{{ obj.profile_image.url }}" />
+			{% endif %}
+		</div><br>
+		<div class="h">name:</div> {{ obj.full_name }}<br>
+		<div class="h">email: </div>{{ obj.email }}<br>
+		<div class="h">skills:</div> {{ obj.skill1 }}<br>
+		<div class="h">branch: </div>{{ obj.branch }}<br>
+		<div class="h">college name/place: </div>{{ obj.college_name }},
+		{{ obj.college_place }}<br>
+		<div class="h">year: </div>{{ obj.year }}<br>
+		<div class="h">contact number: </div>{{ obj.phone_no }}<br>
+		<div class="h">post: </div>{{ obj.post }}<br><br>
+	</div>
+	{% endfor %}
+</body>
+</html>
+
+
+<div class="image-div">
+{% if elements.profile_image %}
+<img src="{{ elements.profile_image.url }}" />
+{% endif %}
+</div>

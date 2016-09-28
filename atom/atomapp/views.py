@@ -52,7 +52,7 @@ def signup(request):
 	return render(request , 'signup.html', context)
 
 def myprofile(request):
-	form = formfills(request.POST or None)
+	form = formfills(request.POST or None, request.FILES or None)
 	if form.is_valid():
 		instance = form.save(commit=False)
 		instance.save()
@@ -72,3 +72,45 @@ def students_view(request):
 	
 	}
 	return render(request, 'students.html', context)
+
+def students_view(request):
+	students = formfill.objects.all()
+	context = {
+		'students' : students,
+	}
+	return render(request, 'studentslist.html', context)
+
+
+#def stdpro(request):
+#	entries = sign_up.objects.all()
+#	
+#
+#	query = request.GET.get("q")
+#	if query:
+#		entries = entries.filter(
+#			Q(full_name__icontains=query)|
+#			Q(college_place__icontains=query)|
+#			Q(college_name__icontains=query)
+#			).distinct()
+#
+#
+#	paginator = Paginator(entries, 10) # Show 10 contacts per page
+#	page = request.GET.get('pages')
+#	try:
+#		entries = paginator.page(page)
+#	except PageNotAnInteger:
+#		entries = paginator.page(1)
+#	except EmptyPage:
+#		entries = paginator.page(paginator.num_pages)
+#
+#	context = {
+#		'entries':entries,
+#	}
+#	return render(request, 'stdpro.html', context)
+#
+#def id(request, id=None):
+#	instance = get_object_or_404(sign_up, id=id)
+#	context = {
+#		'instance': instance
+#	}
+#	return render(request, 'id.html', context)

@@ -1,5 +1,25 @@
+body::-webkit-scrollbar {
+    height: 0em;
+    width: 4px;
+}
+ 
+body::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #547ec9;
+  /*outline: 1px solid slategrey;*/
+}
+
+.outer::-webkit-scrollbar {
+    height: 0em;
+    width: 4px;
+}
+
 .navbar {
 	position:fixed;
+	z-index: 10;
 	height:60px;
 	width:100%;
 	background-color: rgb(24,40,65);
@@ -12,11 +32,11 @@
 	font-size: 40px;
 	color: orange;
 	font-family: geometos;
-	text-align: center;
 	margin-top: 60px;
-	position: relative;
-	top:-40px;
-	z-index: 2;
+	position: fixed;
+	top:-45px;
+	z-index: 12;
+	left:420px;
 }
 
 .formimage {
@@ -28,4 +48,57 @@
 	position: fixed;
 	left:0px;
 	top:60px;
+	z-index: 5;
+}
+
+form {
+	position: relative;
+	z-index: 5;
+	top:200px;
+}
+
+.mainform {
+	position: relative;
+	left:470px;
+	font-family: geometos;
+	z-index: 7;
+}
+
+input {
+	height: 40px;
+	width:400px;
+	font-size: 20px;
+	color:black;
+	border:1px solid orange;
+	border-radius: 5px;
+	outline: none;
+	top:0px;
+	padding-left: 10px;
+}
+
+button {
+	border:0px;
+}
+
+.btnsubmit {
+	width:250px;
+	height:40px;
+	background-color: rgb(24,40,65);
+	margin-left: 80px;
+	border-radius: 5px;
+	color:white;
+	font-family: geometos;
+}
+
+.btnsubmit:hover {
+	cursor: pointer;
+	background-color: rgba(24,40,65,0.9);
+}
+
+a {
+	position: fixed;
+	z-index: 50;
+	color:orange;
+	left:1200px;
+	top:30px;
 }
